@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --page-margin: 20px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-family: "EB Garamond", Garamond, serif;
+  font-weight: 500;
+  line-height: 2em;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  padding: 30px 48px 64px var(--page-margin);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #000;
+  margin: 6px 0 0;
+}
+
+.bio {
+  font-size: 1.5em;
+  color: #000;
+  margin: 0 0 24px;
+  max-width: 600px;
+}
+
+.projects {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  left: calc(-1 * var(--page-margin));
+  width: 100vw;
+  margin-bottom: 64px;
+}
+
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--page-margin);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  padding: 0 0 0 var(--page-margin);
+}
+
+.carousel-slide {
+  flex: 0 0 calc(100vw - var(--page-margin) - 48px);
+  scroll-snap-align: start;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background 0.15s;
+}
+
+.carousel-arrow:hover {
+  background: #fff;
+}
+
+.carousel-arrow-left {
+  left: calc(var(--page-margin) + 20px);
+}
+
+.carousel-arrow-right {
+  right: calc(48px + 20px);
+}
+
+.contact {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.contact-link {
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  .page {
+    padding: 48px 20px 40px var(--page-margin);
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .bio {
+    margin-bottom: 40px;
+  }
+
+  .carousel-wrapper {
+    position: static;
+    width: auto;
+  }
+
+  .carousel {
+    width: auto;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+  .carousel-track {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .carousel-slide {
+    flex: none;
+    width: 100%;
+    scroll-snap-align: none;
+    cursor: default;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
 }
