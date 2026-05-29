@@ -202,6 +202,10 @@ body {
     cursor: default;
   }
 
+  .slide-label {
+    opacity: 1;
+  }
+
   .carousel-arrow {
     display: none;
   }
