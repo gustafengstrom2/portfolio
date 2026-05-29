@@ -2,14 +2,14 @@ import Link from "next/link";
 import Carousel from "./carousel";
 
 const projects = [
-  { src: "/web/Gustaf.png", alt: "Apple Notes" },
-  { src: "/web/Gustaf-1.png", alt: "Pinterest Pin" },
-  { src: "/web/Gustaf-2.png", alt: "Pinterest Profile" },
-  { src: "/web/Gustaf-3.png", alt: "Messenger Status" },
-  { src: "/web/Gustaf-4.png", alt: "Cash App Savings" },
-  { src: "/web/Gustaf-5.png", alt: "Cash App Card" },
-  { src: "/web/Gustaf-6.png", alt: "Cash App Cash Card" },
-  { src: "/web/Gustaf-7.png", alt: "Square Family" },
+  { src: "/web/Web1.jpg", alt: "Cash App – Savings", label: "Cash App – Savings" },
+  { src: "/web/Web2.jpg", alt: "Cash App – Card Studio", label: "Cash App – Card Studio" },
+  { src: "/web/Web3.jpg", alt: "Cash App – Card Tab", label: "Cash App – Card Tab" },
+  { src: "/web/Web4.jpg", alt: "Cash App – Teens", label: "Cash App – Teens" },
+  { src: "/web/Web5.jpg", alt: "Messenger – Status/Friends Tab Concept", label: "Messenger – Status/Friends Tab Concept" },
+  { src: "/web/Web6.jpg", alt: "Pinterest – Tried-It", label: "Pinterest – Tried-It" },
+  { src: "/web/Web7.jpg", alt: "Pinterest – Business Profiles", label: "Pinterest – Business Profiles" },
+  { src: "/web/Web8.jpg", alt: "Apple – Notes (iOS 7 to 13)", label: "Apple – Notes (iOS 7 to 13)" },
 ];
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
       </p>
 
       <section className="projects">
-        <h2 className="section-heading">Selected projects 2011–2024:</h2>
+        <h2 className="section-heading">Selected projects 2011–2025:</h2>
       </section>
 
       <Carousel projects={projects} />

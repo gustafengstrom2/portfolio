@@ -87,15 +87,31 @@ body {
 .carousel-slide {
   flex: 0 0 calc(100vw - var(--page-margin) - 48px);
   scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.slide-image-wrapper {
   border-radius: 8px;
   overflow: hidden;
-  cursor: pointer;
+  line-height: 0;
 }
 
 .project-image {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.slide-label {
+  display: block;
+  padding: 8px 0;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.carousel-slide:hover .slide-label {
+  opacity: 1;
 }
 
 .carousel-arrow {

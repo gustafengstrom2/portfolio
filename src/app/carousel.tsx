@@ -6,6 +6,7 @@ import { useRef, useCallback, useState, useEffect } from "react";
 interface Project {
   src: string;
   alt: string;
+  label: string;
 }
 
 export default function Carousel({ projects }: { projects: Project[] }) {
@@ -94,13 +95,16 @@ export default function Carousel({ projects }: { projects: Project[] }) {
               className="carousel-slide"
               onClick={() => handleSlideClick(index)}
             >
-              <Image
-                src={project.src}
-                alt={project.alt}
-                width={1600}
-                height={900}
-                className="project-image"
-              />
+              <div className="slide-image-wrapper">
+                <Image
+                  src={project.src}
+                  alt={project.alt}
+                  width={1600}
+                  height={900}
+                  className="project-image"
+                />
+              </div>
+              <span className="slide-label">{project.label}</span>
             </div>
           ))}
         </div>
