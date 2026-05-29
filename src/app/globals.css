@@ -8,6 +8,7 @@ body {
   background: #ffffff;
   color: #000000;
   font-family: "EB Garamond", Garamond, serif;
+  font-size: 20px;
   font-weight: 500;
   line-height: 2em;
   margin: 0;
@@ -43,7 +44,7 @@ body {
   font-size: 1.5em;
   color: #000;
   margin: 0 0 24px;
-  max-width: 600px;
+  max-width: 720px;
 }
 
 .projects {

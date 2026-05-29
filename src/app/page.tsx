@@ -33,10 +33,10 @@ export default function Home() {
       </header>
 
       <p className="bio">
-        Product Designer based in New York. I began as a graphic designer in
-        Stockholm, Sweden, but moved to the US in 2011 to join Apple. Since then
-        I&apos;ve worked at Pinterest, Facebook Messenger, Cash App and now at
-        Square, where I lead the POS Design Team.
+        Product Designer based in New York. I started as a graphic designer in
+        Stockholm before moving to the US in 2011 to join Apple. Since then
+        I&apos;ve worked at Pinterest, Facebook Messenger, Cash App, and most
+        recently Square.
       </p>
 
       <section className="projects">
